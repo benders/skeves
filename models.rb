@@ -1,13 +1,10 @@
 require 'appengine-apis'
 require 'dm-core'
 require 'dm-validations'
-require 'dm-datastore-adapter/datastore-adapter'
 
 include AppEngine
 
-DataMapper.setup(:default,
-                 { :adapter => :datastore,
-                   :host => 'localhost' })
+DataMapper.setup(:default, "appengine://auto")
 
 class Pilot
   include DataMapper::Resource

@@ -4,3 +4,4 @@ config/deploy.rb
 appengine-web.xml
 *.war
 tmp
+.gems/cache
