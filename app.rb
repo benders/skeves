@@ -19,7 +19,7 @@ get '/' do
     rescue Reve::Exceptions => e
       return "Eve didn't like you auth information: #{e.message}"
     rescue Exception => e
-      return "Error fetching your queue, please try again later: #{e.message}"
+      return "Error fetching your queue, please try again later: #{e.message} -- <pre>#{e.backtrace.join("\n")}</pre>"
     end
   
     return 'No skills in queue.' if @skills.empty?
