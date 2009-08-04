@@ -5,3 +5,4 @@ appengine-web.xml
 *.war
 tmp
 .gems/cache
+WEB-INF
